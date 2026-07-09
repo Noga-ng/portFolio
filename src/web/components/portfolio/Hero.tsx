@@ -2,7 +2,7 @@ import { FaGithub, FaDownload, FaArrowRight } from "react-icons/fa";
 import {motion} from 'framer-motion';
 import noga_ph from '../../../assets/noga_ph.jpg';
 import { useTyping } from "./HeroAnimation";
-import mycv from "../../../assets/cvEnFrançais.pdf";
+import mycv from "../../../assets/myCvFrançais.pdf";
 import type { ReactElement } from "react";
 
 export default function Hero(): ReactElement {

@@ -57,7 +57,7 @@ export default function About(): ReactElement {
 
                         <p className="text-slate-400 mt-8 leading-8">
 
-                            Passionné par le développement logiciel,
+                            Je suis un developpeur full-stack autodidact passionné par le développement logiciel,
                             j'aime construire des solutions modernes,
                             performantes et évolutives.
 

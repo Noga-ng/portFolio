@@ -14,7 +14,25 @@ export function useTyping(text: string, speed = 60) {
         }, speed);
 
         return () => clearInterval(interval);
-    }, [text]);
+    }, [speed, text]);
 
     return display;
 }
+
+// Issue
+//   ↓
+// Branch
+//   ↓
+// Development
+//   ↓
+// Commit
+//   ↓
+// Push
+//   ↓
+// Pull Request
+//   ↓
+// Code Review
+//   ↓
+// Merge
+//   ↓
+// Issue fermée

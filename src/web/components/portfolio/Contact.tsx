@@ -108,7 +108,7 @@ export default function Contact(): ReactElement {
                             </a>
 
                             <a
-                                href="https://lnkdin.com/nogagermainio" target="_blank"
+                                href="https://www.linkedin.com/in/noga-germainio-9173552bb" target="_blank"
                                 className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-indigo-500 transition"
                             >
                                 <FaLinkedin />

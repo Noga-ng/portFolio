@@ -1,79 +1,65 @@
-<<<<<<< HEAD
-# PortFolio
-=======
-# React + TypeScript + Vite
+# Portfolio professionnel — Noga Germainio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Refonte du portfolio en vue des candidatures développeur backend / full-stack (Madagascar et télétravail).
 
-Currently, two official plugins are available:
+**Site :** https://myportfolio-noga.vercel.app/  
+**GitHub :** https://github.com/Noga-ng
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Stack
 
-## React Compiler
+React 19, TypeScript, Vite 8, Tailwind CSS 4 et React Icons. La refonte conserve la configuration et les dépendances du dépôt existant.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Principales améliorations
 
-## Expanding the ESLint configuration
+- Positionnement clair : développeur backend & full-stack (PHP, React, TypeScript, Go et SQL).
+- Études de cas concrètes : MSBC, NCache, Noga_SE, Noga_HTTP et Noga_CH.
+- Présentation précise du rôle et des contributions, sans métriques marketing inventées.
+- Compétences regroupées par domaine, sans évaluation subjective en étoiles.
+- Navigation mobile avec bouton accessible, ancrages fonctionnels et états de focus.
+- Suppression de l'ancien formulaire de contact sans backend : `mailto:` et coordonnées cliquables.
+- Liens vers les dépôts GitHub vérifiés, et suppression des liens vides.
+- CV et portrait récents (`public/CV-Noga-Germainio.pdf`, `public/portrait-professionnel.jpg`).
+- Métadonnées HTML françaises, OpenGraph, Twitter Cards et données structurées Person.
+- Image OpenGraph allégée et portrait compressé.
+- Respect de `prefers-reduced-motion` et lien d'évitement vers le contenu.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Développement local
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm ci
+npm run dev
+npm run lint
+npm run build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Build prévu sur Node.js 22+ selon les dépendances actuelles du dépôt. Vérifier les contraintes exactes de Vite et des plugins lors de l'installation.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Intégration du ZIP
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Le ZIP contient **uniquement les fichiers ajoutés ou remplacés**. À partir d'un clone du dépôt initial :
 
-```
->>>>>>> master
+1. Créer une branche de travail : `git checkout -b improve/recruiter-portfolio-2026`.
+2. Copier le contenu de ce ZIP à la racine du dépôt en remplaçant les fichiers homonymes.
+3. Ne pas supprimer `src/assets/`, `package.json`, `package-lock.json`, `vite.config.ts`, `src/App.tsx` et `src/main.tsx`.
+4. Lancer `npm ci`, `npm run lint`, puis `npm run build`.
+5. Vérifier en navigateur les liens, le menu mobile, le chargement du CV et les cartes projets.
+6. Créer une pull request vers `main` après validation des tests.
+
+Les anciens composants du dossier `src/web/components/portfolio/` sont conservés, mais les anciennes sections (Hero, About, Skills, Contact, etc.) ne sont plus utilisées par la page remplacée. Ils pourront être supprimés dans un commit de nettoyage une fois la refonte validée.
+
+## Maintenance du contenu
+
+Modifier les textes de projets et de compétences dans `src/web/data/portfolio.ts`.
+
+Modifier la page, la navigation et les informations de contact dans `src/web/pages/portfolio.tsx`.
+
+Personnaliser les styles et les contrastes dans `src/index.css`.
+
+Pour mettre à jour le CV, remplacer `public/CV-Noga-Germainio.pdf` en conservant le nom du fichier.
+
+## Limites / vérifications restantes
+
+- Le dépôt original n'a pas pu être compilé dans cet environnement. Exécuter le build et le lint localement ou sur la CI.
+- Le site MSBC renvoie vers la vitrine publique ; son back-office est privé et ne doit pas être exposé.
+- L'affirmation concernant les 253 tests / 849 assertions de NCache provient d'une campagne de tests datée d'août 2026 : actualiser si nécessaire.
+- Vérifier sur mobile, clavier, Lighthouse et navigateurs courants avant mise en production.

@@ -1,6 +1,6 @@
 import { FaTimes } from "react-icons/fa";
 
-export default function ProjectModal({ project, onClose }: any) {
+export default function ProjectModal({ project, onClose }:any) {
     if (!project) return null;
 
     return (

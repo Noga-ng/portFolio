@@ -11,9 +11,9 @@ export default function ProjectCard({ project, number }: Props) {
           <img src={project.image} alt="" loading="lazy" decoding="async" className="project-card__image" />
         ) : (
           <div className="project-card__placeholder">
-            <span className="text-xs tracking-[0.3em] uppercase text-teal-200/60">Cache · PHP</span>
-            <span className="text-5xl sm:text-6xl font-black tracking-tight text-white">NCache</span>
-            <span className="font-mono text-sm text-teal-100/70">get() · set() · invalidate()</span>
+            <span className="text-xs tracking-[0.3em] uppercase text-teal-200/60">{project.category}</span>
+            <span className="max-w-[90%] text-center text-3xl sm:text-4xl font-black tracking-tight text-white">{project.slug === 'ncache' ? 'NCache' : 'API REST · Go'}</span>
+            <span className="font-mono text-sm text-teal-100/70">{project.technologies.slice(0, 3).join(' · ')}</span>
           </div>
         )}
       </div>

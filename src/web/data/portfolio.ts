@@ -74,7 +74,26 @@ export const projects: Project[] = [
     image: httpImage,
     source: 'https://github.com/Noga-ng/Noga_CH',
   },
+  {
+    slug: 'go-api',
+    title: 'API REST en Go · Prototype',
+    category: 'Prototype personnel · Backend',
+    description: 'Exploration de services HTTP en Go pour des API métier structurées.',
+    contribution: 'Mise en pratique des handlers HTTP, de la validation des données, de l’authentification JWT et de la gestion des permissions.',
+    technologies: ['Go', 'API REST', 'HTTP', 'JWT'],
+    highlights: ['Organisation handlers / services', 'Authentification et contrôle des accès', 'Travail personnel en évolution'],
+  },
 ];
+
+// Ajouter ici uniquement les certifications réellement obtenues, avec un lien de vérification.
+// HackerRank, Zend et GitHub Actions ne sont pas indiquées comme acquises.
+export type Certification = {
+  title: string;
+  issuer: string;
+  obtainedAt: string;
+  url: string;
+};
+export const certifications: Certification[] = [];
 
 export const stack = [
   { title: 'Backend & API', details: 'PHP, Go, API REST, architecture MVC, middleware, authentification, PDO' },

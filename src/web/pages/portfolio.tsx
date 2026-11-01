@@ -5,7 +5,7 @@ import {
   FaPhone, FaServer, FaXmark,
 } from 'react-icons/fa6';
 import ProjectList from '../components/portfolio/Projects';
-import { stack } from '../data/portfolio';
+import { stack, certifications } from '../data/portfolio';
 
 const navigation = [
   { label: 'Accueil', href: '#accueil' },
@@ -54,21 +54,21 @@ function Hero() {
       <div className="hero-glow" aria-hidden="true" />
       <div className="container-wide relative grid items-center gap-12 lg:grid-cols-[1.18fr_0.82fr] lg:gap-16">
         <div>
-          <p className="mb-7 inline-flex items-center gap-3 rounded-full border border-teal-300/25 bg-teal-400/10 px-4 py-2 text-sm font-medium text-teal-200"><span className="size-2 rounded-full bg-teal-300" aria-hidden="true" />Ouvert aux opportunités · Madagascar</p>
+          <p className="mb-7 inline-flex items-center gap-3 rounded-full border border-teal-300/25 bg-teal-400/10 px-4 py-2 text-sm font-medium text-teal-200"><span className="size-2 rounded-full bg-teal-300" aria-hidden="true" />En recherche d’opportunités · Madagascar</p>
           <p className="section-kicker mb-4">Bonjour, je suis Noga Germainio</p>
           <h1 className="max-w-3xl text-[clamp(2.7rem,6vw,5.6rem)] font-extrabold leading-[1.07] tracking-[-0.055em] text-white">
             Je construis des <span className="text-gradient">applications web fiables.</span>
           </h1>
-          <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-300">Développeur <strong className="font-semibold text-white">backend & full-stack</strong>, spécialisé en PHP, React, TypeScript, SQL et API REST. J’aime transformer des besoins métier complexes en produits utiles, performants et maintenables.</p>
+          <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-300">Développeur <strong className="font-semibold text-white">backend & full-stack</strong> et responsable de bases de données chez MSBC depuis début 2024. Avec <strong className="font-semibold text-white">près de 3 ans d’expérience professionnelle en informatique</strong>, je conçois aussi des applications métier, des API REST et des composants réutilisables en PHP, React, TypeScript et SQL.</p>
           <div className="mt-9 flex flex-wrap gap-3">
             <a className="button button--primary" href="#projets">Découvrir mes projets <FaArrowRight aria-hidden="true" /></a>
             <a className="button button--secondary" href={cv} target="_blank" rel="noopener noreferrer"><FaDownload aria-hidden="true" /> Voir mon CV</a>
             <a className="button button--icon" href={github} target="_blank" rel="noopener noreferrer" aria-label="Visiter mon profil GitHub"><FaGithub aria-hidden="true" /></a>
           </div>
-          <div className="mt-12 grid max-w-xl grid-cols-3 gap-4 border-t border-white/10 pt-6">
-            <div><strong className="block text-sm font-semibold text-white">Applications métier</strong><span className="text-xs leading-5 text-slate-400">Usages réels</span></div>
-            <div><strong className="block text-sm font-semibold text-white">Open source</strong><span className="text-xs leading-5 text-slate-400">Bibliothèques PHP / TS</span></div>
-            <div><strong className="block text-sm font-semibold text-white">Qualité</strong><span className="text-xs leading-5 text-slate-400">Tests & CI</span></div>
+          <div className="mt-12 grid max-w-xl grid-cols-3 gap-4 border-t border-white/10 pt-6" aria-label="Repères de mon parcours">
+            <div><strong className="block text-xl font-bold text-white">2024</strong><span className="text-xs leading-5 text-slate-400">Début de mes responsabilités chez MSBC</span></div>
+            <div><strong className="block text-xl font-bold text-white">6</strong><span className="text-xs leading-5 text-slate-400">Projets et outils présentés</span></div>
+            <div><strong className="block text-xl font-bold text-white">253</strong><span className="text-xs leading-5 text-slate-400">Tests NCache · août 2026</span></div>
           </div>
         </div>
         <div className="relative mx-auto w-full max-w-[420px]">
@@ -97,9 +97,9 @@ function About() {
           <h2 className="section-title">Au-delà du code, <span className="text-gradient">résoudre des problèmes.</span></h2>
         </div>
         <div className="space-y-6 text-base leading-8 text-slate-300">
-          <p>Je suis un développeur autodidacte basé à Toamasina, Madagascar. Mon travail couvre l’interface utilisateur, les API, la conception des données et la maintenance de solutions web.</p>
-          <p>Avec l’application MSBC, j’ai participé à la construction d’outils pour les membres, les paiements, les statistiques et la gestion des accès. En parallèle, je développe des composants techniques personnels comme <strong className="text-white">NCache</strong>, <strong className="text-white">Noga_SE</strong> et un micro-framework HTTP PHP.</p>
-          <p>J’accorde une attention particulière aux contrats API, aux performances SQL, à la lisibilité du code, aux tests et à l’expérience des utilisateurs.</p>
+          <p>Je suis basé à Toamasina, Madagascar. Mon parcours associe des responsabilités professionnelles en gestion de bases de données et le développement d’applications web. Depuis début 2024, je travaille chez MSBC, où je participe à la fiabilisation des données et à l’évolution des outils métier.</p>
+          <p><strong className="text-white">Fortement autodidacte</strong>, j’ai développé une capacité à étudier de nouvelles technologies, comprendre leurs mécanismes internes et transformer cet apprentissage en réalisations concrètes. J’apprends par la pratique, la documentation, l’expérimentation et les tests.</p>
+          <p>En parallèle de MSBC, j’ai conçu des composants personnels comme <strong className="text-white">NCache</strong>, <strong className="text-white">Noga_SE</strong>, <strong className="text-white">Noga_HTTP</strong> et <strong className="text-white">Noga_CH</strong>. J’accorde une attention particulière à la maintenabilité, aux contrats API, à la sécurité et aux performances SQL.</p>
           <a className="inline-flex items-center gap-2 font-semibold text-teal-300 hover:text-teal-200" href="#experience">Découvrir mon parcours <FaArrowRight aria-hidden="true" /></a>
         </div>
       </div>
@@ -114,17 +114,17 @@ function Experience() {
         <div className="mb-12 max-w-3xl"><p className="section-kicker">02 / Expérience</p><h2 className="section-title">Un projet concret, <span className="text-gradient">des responsabilités réelles.</span></h2></div>
         <div className="panel grid gap-10 p-7 sm:p-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
-            <span className="text-sm font-semibold text-teal-300">Depuis 2025 · Toamasina, Madagascar</span>
+            <span className="text-sm font-semibold text-teal-300">Début 2024 – aujourd’hui · Toamasina, Madagascar</span>
             <h3 className="mt-3 text-3xl font-bold text-white">Association MSBC</h3>
-            <p className="mt-2 text-slate-300">Développement web · Maintenance et gestion des données</p>
-            <p className="mt-5 text-sm leading-7 text-slate-400">Participation au développement et à l’évolution d’une application de gestion associative, avec des besoins concrets de suivi, fiabilité et performance.</p>
+            <p className="mt-2 text-slate-300">Responsable des bases de données · Développement applicatif</p>
+            <p className="mt-5 text-sm leading-7 text-slate-400">Responsable des données depuis début 2024, je contribue aussi au développement et à l’amélioration des applications de l’association. Cette expérience combine exploitation des données et évolution de fonctionnalités métier.</p>
           </div>
           <ul className="grid gap-4 sm:grid-cols-2">
             {[
-              ['Applications métier', 'Modules de membres, conjoints, enfants et adhésions.'],
-              ['Gestion & reporting', 'Cotisations, tableaux de bord et statistiques.'],
-              ['Données', 'Requêtes SQL, sauvegardes et intégrité des données.'],
-              ['Évolution produit', 'Authentification, API et améliorations des formulaires.'],
+              ['Administration des données', 'Maintenance MySQL / MariaDB, sauvegardes et intégrité des données.'],
+              ['Performance SQL', 'Optimisation des requêtes et fiabilisation des traitements.'],
+              ['Applications métier', 'Modules d’adhésion, de membres, de familles et de cotisations.'],
+              ['Évolutions applicatives', 'API REST, authentification, formulaires et tableaux de bord.'],
             ].map(([title, detail]) => <li key={title} className="rounded-2xl border border-white/10 bg-white/[0.035] p-5"><FaCheck className="mb-3 text-teal-300" aria-hidden="true" /><strong className="block text-white">{title}</strong><p className="mt-2 text-sm leading-6 text-slate-400">{detail}</p></li>)}
           </ul>
         </div>
@@ -138,7 +138,7 @@ function Projects() {
     <section id="projets" className="section-spacing">
       <div className="container-wide">
         <div className="mb-12 flex flex-wrap items-end justify-between gap-6">
-          <div className="max-w-3xl"><p className="section-kicker">03 / Réalisations</p><h2 className="section-title">Du produit métier aux <span className="text-gradient">outils développeur.</span></h2><p className="mt-5 max-w-xl leading-7 text-slate-400">Des exemples concrets de ce que j’ai développé, amélioré et appris.</p></div>
+          <div className="max-w-3xl"><p className="section-kicker">03 / Réalisations</p><h2 className="section-title">Du produit métier aux <span className="text-gradient">outils développeur.</span></h2><p className="mt-5 max-w-xl leading-7 text-slate-400">Applications métier, bibliothèques open source et prototypes : chaque projet illustre une compétence mise en pratique.</p></div>
           <a className="button button--secondary" href={`${github}?tab=repositories`} target="_blank" rel="noopener noreferrer"><FaGithub aria-hidden="true" /> Tous mes dépôts</a>
         </div>
         <ProjectList />
@@ -159,7 +159,26 @@ function Skills() {
             return <div className="panel p-7" key={group.title}><span className="mb-6 inline-flex size-12 items-center justify-center rounded-2xl bg-teal-400/10 text-xl text-teal-300"><Icon aria-hidden="true" /></span><h3 className="text-xl font-bold text-white">{group.title}</h3><p className="mt-4 text-sm leading-7 text-slate-400">{group.details}</p></div>;
           })}
         </div>
-        <p className="mt-7 text-sm leading-7 text-slate-400">Je développe également mes compétences en Go et en PostgreSQL pour faire évoluer mes projets backend.</p>
+        <div className="mt-9 panel grid gap-6 p-6 sm:grid-cols-[0.9fr_1.1fr] sm:p-8">
+          <div>
+            <p className="section-kicker">Ma méthode de progression</p>
+            <h3 className="mt-3 text-xl font-bold text-white">Apprendre, construire, vérifier.</h3>
+          </div>
+          <p className="text-sm leading-7 text-slate-300">Je développe mes compétences en autodidacte à travers la documentation technique, le prototypage, la conception de composants et les tests. Go et PostgreSQL font notamment partie de mes axes de progression backend.</p>
+        </div>
+        {certifications.length > 0 && (
+          <div className="mt-10" aria-label="Certifications obtenues">
+            <h3 className="text-xl font-bold text-white">Certifications vérifiables</h3>
+            <div className="mt-4 grid gap-4 sm:grid-cols-2">
+              {certifications.map(certification => (
+                <a key={certification.url} className="panel p-5 text-teal-200 hover:border-teal-300/40" href={certification.url} target="_blank" rel="noopener noreferrer">
+                  <strong className="block text-white">{certification.title}</strong>
+                  <span className="mt-2 block text-sm">{certification.issuer} · {certification.obtainedAt} ↗</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

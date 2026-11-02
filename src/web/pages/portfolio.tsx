@@ -70,7 +70,8 @@ function Navbar() {
           </a>
           <button
             type="button"
-            className="inline-flex size-11 items-center justify-center rounded-xl border border-white/15 text-white lg:hidden"
+            className="inline-flex size-11 items-center justify-center 
+                rounded-xl border border-white/15 text-white lg:hidden"
             aria-expanded={open}
             aria-controls="mobile-navigation"
             aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
@@ -103,7 +104,8 @@ function Navbar() {
             ))}
             <a
               href="#contact"
-              className="rounded-lg px-4 py-3 font-semibold text-teal-200 hover:bg-white/10"
+              className="rounded-lg px-4 py-3 font-semibold 
+              text-teal-200 hover:bg-white/10"
               onClick={() => setOpen(false)}
             >
               Contact
